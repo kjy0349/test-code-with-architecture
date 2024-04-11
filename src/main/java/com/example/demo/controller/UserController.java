@@ -68,7 +68,7 @@ public class UserController {
         @RequestBody UserUpdateDto userUpdateDto
     ) {
         UserEntity userEntity = userService.getByEmail(email);
-        userEntity = userService.updateUser(userEntity.getId(), userUpdateDto);
+        userEntity = userService.update(userEntity.getId(), userUpdateDto);
         return ResponseEntity
             .ok()
             .body(toMyProfileResponse(userEntity));
