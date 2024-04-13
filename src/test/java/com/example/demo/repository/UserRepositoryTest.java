@@ -1,16 +1,17 @@
 package com.example.demo.repository;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@DataJpaTest
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@Sql("/sql/testsql.sql")
 class UserRepositoryTest {
-
-    @Test
-    void findByIdAndStatus() {
-    }
 
     @Test
     void findByEmailAndStatus() {
