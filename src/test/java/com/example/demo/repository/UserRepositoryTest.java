@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-@Sql("/sql/testsql.sql")
+@Sql("/sql/user-test-data.sql")
 class UserRepositoryTest {
 
     @Test
