@@ -124,7 +124,7 @@ class UserServiceTest {
     void PENDING_상태의_사용자는_인증_코드로_ACTIVE_시킬_수_있다() {
         // given
         // when
-        userService.verifyEmail(2, "aaaa-aaaaa-aaaa");
+        userService.verifyEmail(2, "bbbb-bbbbb-bbbb");
 
         // then
         UserEntity result = userService.getById(2);
